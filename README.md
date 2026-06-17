@@ -1,4 +1,4 @@
-# 🚀 TradeSphere — Stock Trading Platform
+# 🚀 ShopEZ — Stock Trading Platform
 
 Developed and Maintained by **Guduguntla Manikanta**.
 
