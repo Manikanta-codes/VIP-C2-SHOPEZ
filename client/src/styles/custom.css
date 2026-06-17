@@ -1,0 +1,304 @@
+/* ============================================================
+   Bootstrap overrides + Navbar/Footer component styles
+   (used by the components that were built with Bootstrap classes)
+   ============================================================ */
+
+/* --- NAVBAR ------------------------------------------------ */
+.navbar-shopez {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: 64px;
+  background: rgba(13, 17, 23, 0.96) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border) !important;
+  padding: 0 0;
+}
+.navbar-shopez .container { height: 64px; }
+
+.brand-icon  { color: var(--secondary); font-size: 1.3rem; margin-right: 0.4rem; }
+.brand-text  { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--text-primary); }
+
+.navbar-shopez .nav-link {
+  color: var(--text-secondary) !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem !important;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.navbar-shopez .nav-link:hover { color: var(--text-primary) !important; background: rgba(255,255,255,0.05); }
+.navbar-shopez .nav-link.active { color: var(--secondary) !important; background: rgba(0,191,165,0.1); }
+
+.navbar-balance {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  color: var(--primary-light);
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.balance-icon { color: var(--primary-light); font-size: 0.85rem; }
+
+.user-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+  border: 2px solid var(--glass-border);
+  transition: var(--transition);
+  user-select: none;
+}
+.user-avatar:hover { border-color: var(--secondary); }
+.user-avatar::after { display: none !important; }
+
+.dropdown-menu-dark-custom {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow) !important;
+  min-width: 200px;
+  padding: 0.25rem 0;
+}
+.dropdown-menu-dark-custom .dropdown-item {
+  color: var(--text-secondary) !important;
+  font-size: 0.875rem;
+  padding: 0.55rem 1rem;
+  transition: var(--transition);
+}
+.dropdown-menu-dark-custom .dropdown-item:hover {
+  background: var(--bg-card-hover) !important;
+  color: var(--text-primary) !important;
+}
+.dropdown-menu-dark-custom .dropdown-divider { border-color: var(--border-color) !important; }
+.text-danger-c { color: var(--danger) !important; }
+.text-danger-c:hover { color: var(--danger-light) !important; }
+
+.btn-ghost {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.btn-ghost:hover { color: var(--text-primary); border-color: var(--border-hover); }
+
+.btn-outline-custom {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border: none;
+  color: white !important;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.btn-outline-custom:hover { box-shadow: 0 4px 12px rgba(139, 92, 246, 0.35); transform: translateY(-1px); }
+
+.navbar-toggler {
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  padding: 0.35rem 0.6rem;
+}
+.navbar-toggler:focus { box-shadow: none !important; }
+
+/* --- FOOTER ------------------------------------------------ */
+.footer-shopez {
+  background: var(--bg-card);
+  border-top: 1px solid var(--glass-border);
+  padding: 3rem 0 1.5rem;
+}
+.footer-brand {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+.footer-text { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
+.footer-link {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.footer-link:hover { color: var(--secondary); }
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.social-icon:hover { color: var(--secondary); border-color: rgba(0,191,165,0.4); }
+
+/* --- MISC UTILITIES ---------------------------------------- */
+.text-muted-c    { color: var(--text-muted) !important; }
+.text-secondary-c{ color: var(--text-secondary) !important; }
+.text-accent-c   { color: var(--accent) !important; }
+.fw-700          { font-weight: 700; }
+.rounded-sm-custom { border-radius: var(--radius-sm); }
+
+/* Trade form wrapper - used by the subagent-built TradeForm */
+.trade-form-wrapper { }
+.trade-tabs {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+.trade-tab {
+  flex: 1;
+  padding: 0.6rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trade-tab.active-buy  { background: rgba(102,187,106,0.15); color: var(--success); }
+.trade-tab.active-sell { background: rgba(239,83,80,0.15); color: var(--danger); }
+
+.trade-body { }
+.trade-summary {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.875rem 1rem;
+  margin-bottom: 1rem;
+}
+.trade-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+}
+.trade-summary-row .label { color: var(--text-muted); }
+.trade-summary-row .value { font-weight: 600; }
+.trade-summary-row.total {
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+/* qty-control used by old TradeForm */
+.qty-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.qty-btn {
+  background: rgba(255,255,255,0.04);
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qty-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+.qty-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 0.5rem;
+  outline: none;
+  -moz-appearance: textfield;
+}
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+/* search-input-wrapper used by old StockSearch */
+.search-input-wrapper {
+  position: relative;
+}
+.search-input-wrapper .form-control {
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 0.6rem 1rem 0.6rem 2.4rem;
+  font-size: 0.875rem;
+  transition: var(--transition);
+  width: 260px;
+  min-width: 200px;
+}
+.search-input-wrapper .form-control:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(0,191,165,0.1);
+  outline: none;
+}
+.search-input-wrapper .form-control::placeholder { color: var(--text-muted); }
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+/* skeleton-chart */
+.skeleton-chart {
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* chart-container */
+.chart-container { }
+
+/* alert-danger override */
+.alert-danger {
+  background: rgba(239,83,80,0.1) !important;
+  border: 1px solid rgba(239,83,80,0.3) !important;
+  color: var(--danger) !important;
+  border-radius: var(--radius-sm);
+}
+
+/* bg-elevated used in search dropdown */
+.bg-elevated { background: var(--bg-card-hover) !important; }
+
+/* cursor-pointer */
+.cursor-pointer { cursor: pointer; }
+
+/* btn-glow general */
+.btn-glow:hover:not(:disabled) { filter: brightness(1.1); }
